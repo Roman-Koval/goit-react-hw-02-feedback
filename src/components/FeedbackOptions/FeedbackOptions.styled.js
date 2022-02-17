@@ -17,9 +17,10 @@ export const Button = styled.button`
 export const List = styled.ul`
   display: flex;
   list-style-type: none;
+  margin-left: 20px;
 `;
 
 export const Li = styled.li`
-  margin-right: 20px;
+  margin-right: 30px;
 `;
 

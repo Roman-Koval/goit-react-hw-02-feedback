@@ -4,17 +4,20 @@ import { Button, List, Li } from "./FeedbackOptions.styled";
 
 class FeedbackOptions extends Component {
   render() {
+    const { options, onLeaveFeedback } = this.props;
     return (
       <List>
-        {this.props.options.map((option) => {
+        {options.map(option => {
           return (
             <Li key={option}>
               <Button
                 type="button"
                 name={option}
-                onClick={this.props.onLeaveFeedback}
-              >
-                {option}
+                onClick={() => {
+                  onLeaveFeedback(option);
+              }}
+          >
+              {option}
               </Button>
             </Li>
           );
@@ -30,3 +33,4 @@ FeedbackOptions.propTypes = {
 };
 
 export default FeedbackOptions;
+
